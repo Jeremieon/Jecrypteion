@@ -6,17 +6,17 @@ class Machine:
         self.msg = msg
         self.mode = mode
         self.keys = keys
-        self.values = values 
+        self.val = val
     
     def encrypt(self):
-        key_zipper = (self.keys,self.values)
+        key_zipper = zip(self.keys,self.val)
         dict_encrypt =dict(key_zipper)
         new_message = ''.join([dict_encrypt[letter] for letter in "".join(self.msg.split()).lower()])
         return new_message
       
 
     def decrypt(self):
-        key_zipper = zip(self.values,self.keys)
+        key_zipper = zip(self.val,self.keys)
         dict_decrypt =dict(key_zipper)
         new_message = ''.join([dict_decrypt[letter] for letter in self.msg.lower().strip()])
         return new_message
