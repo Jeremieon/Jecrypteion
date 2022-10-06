@@ -3,13 +3,17 @@
 class Machine:
     #initializing 
     def __init__(self,msg,mode,keys,val):
-        pass
+        self.msg = msg
+        self.mode = mode
+        self.keys = keys
+        self.values = values 
     
     def encrypt(self):
         key_zipper = (self.keys,self.values)
         dict_encrypt =dict(key_zipper)
         new_message = ''.join([dict_encrypt[letter] for letter in "".join(self.msg.split()).lower()])
         return new_message
+      
 
     def decrypt(self):
         key_zipper = zip(self.values,self.keys)
@@ -25,9 +29,9 @@ values = keywords[-1] + keywords[0:-1]
 crypo = Machine(message,mode,keywords,values)
 
 if crypo.mode == 'e':
-    print(check.encrypt())
+    print(crypo.encrypt())
 else:
-    print(check.decrypt())
+    print(crypo.decrypt())
 
     
 
