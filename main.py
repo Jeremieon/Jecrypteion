@@ -4,9 +4,9 @@ class Machine:
         pass
     
     def encrypt(self):
-        new_message = []
         key_zipper = (self.keys,self.values)
         dict_encrypt =dict(key_zipper)
-        for letter in dict_encrypt 
+        new_message = ''.join([dict_encrypt[letter] for letter in "".join(self.msg.split()).lower()])
+        return new_message
 crypo = Machine()
 
