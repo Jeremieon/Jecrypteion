@@ -28,10 +28,12 @@ values = keywords[-1] + keywords[0:-1]
 #Main Object
 crypo = Machine(message,mode,keywords,values)
 
-if crypo.mode == 'e':
-    print(crypo.encrypt())
-else:
-    print(crypo.decrypt())
+
+if __name__ == "__main__":
+    if crypo.mode == 'e':
+        print(crypo.encrypt())
+    else:
+        print(crypo.decrypt())
 
     
 
