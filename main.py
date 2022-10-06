@@ -1,5 +1,4 @@
 #the main class
-#Work in progress!!
 class Machine:
     #initializing 
     def __init__(self,msg,mode,keys,val):
