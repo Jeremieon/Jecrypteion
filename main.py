@@ -10,6 +10,12 @@ class Machine:
         dict_encrypt =dict(key_zipper)
         new_message = ''.join([dict_encrypt[letter] for letter in "".join(self.msg.split()).lower()])
         return new_message
+
+    def decrypt(self):
+        key_zipper = zip(self.values,self.keys)
+        dict_decrypt =dict(key_zipper)
+        new_message = ''.join([dict_decrypt[letter] for letter in self.msg.lower().strip()])
+        return new_message
 #declaring object variables
 message = input("Enter your secret : ")
 mode = input("Select crypto mode: encode(e) OR decrypt as default:")
@@ -23,4 +29,5 @@ if crypo.mode == 'e':
 else:
     print(check.decrypt())
 
+    
 
