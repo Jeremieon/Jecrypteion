@@ -1,6 +1,6 @@
 #the main class aka the brain box
 class Machine:
-    def __init__(self,msg,mode,keys,values):
+    def __init__():
         self.msg = msg
         self.mode = mode
         self.keys = keys
