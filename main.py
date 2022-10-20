@@ -2,10 +2,16 @@
 class Machine:
     #initializing 
     def __init__(self):
+        self.__str__()
         self.msg = input("Enter your secret message: ")
         self.mode = input("Select crypto mode: encode(e) OR decrypt as default:")
         self.keys= "ab7cd1ef8gh2ij9kl3mn0op4qr!st5uvwx6yz@#"
         self.val =  self.keys[-1] +  self.keys[0:-1]
+
+    def __str__(self):
+        print('+---------------------------------------------------+')
+        print('|            *** WELCOME TO JECRYPTEION ***         |')
+        print('+---------------------------------------------------+')
 
     def encrypt(self):
         key_zipper = zip(self.keys,self.val)
