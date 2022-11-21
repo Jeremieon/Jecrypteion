@@ -12,8 +12,9 @@ class Machine:
         print('+---------------------------------------------------+')
         print('|            *** WELCOME TO JECRYPTEION ***         |')
         print('+---------------------------------------------------+')
-
+    def
     def encrypt(self):
+        print('yes sir!')
         key_zipper = zip(self.keys,self.val)
         dict_encrypt =dict(key_zipper)
         new_message = ''.join([dict_encrypt[letter] for letter in "".join(self.msg.split()).lower()])
@@ -27,13 +28,14 @@ class Machine:
         return new_message
 #obje
 crypo = Machine()
+crypo.eee()
 
 
-if __name__ == "__main__":
-    if crypo.mode == 'e':
-        print(crypo.encrypt())
-    else:
-        print(crypo.decrypt())
+#if __name__ == "__main__":
+  #  if crypo.mode == 'e':
+     #   print(crypo.encrypt())
+   # else:
+        #print(crypo.decrypt())
 
     
 
